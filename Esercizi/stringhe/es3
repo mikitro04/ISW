@@ -1,0 +1,16 @@
+# Scrivere una funzione che accetta una stringa e che, se esiste
+#  un punto '.' nella stringa, ne restituisce la prima parte, cioe'
+#  quella che precede il punto.
+
+#  Esempio: "ciao .a tutti. ecco" -> "ciao "
+
+def finoAlPunto(s):
+    res = ''
+    for c in s:
+        if c != '.':
+            res = res + c
+        else:
+            return res
+    return res
+
+print(finoAlPunto(input('Inserisci stringa: ')))

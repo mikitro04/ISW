@@ -1,0 +1,33 @@
+# Creare un programma che chieda all’utente di inserire 2 stringhe.
+#  Il programma deve:
+#   ➢ creare una nuova stringa uguale alla somma delle lettere finali delle due stringhe
+#   ➢ restituire le due stringhe al contrario
+#   ➢ 1. usando lo slicing
+#   ➢ 2. usando il metodo reversed()
+#   ➢ 3. definendo una funzione ricorsiva
+
+def fun1(s1, s2):
+    return s1[-1] + s2[-1]
+
+def fun2(s1, s2):
+    return s1[::-1] + '  ' + s2[::-1]
+
+def fun3(s1, s2):
+    return ''.join(reversed(s1)) + '  ' + ''.join(reversed(s2))
+
+def rev(s):
+    if len(s) <= 1:
+        return s
+    return s[-1] + rev(s[:-1])
+
+def fun4(s1, s2):
+    return rev(s1) + '  ' + rev(s2)
+
+
+s1 = input('Inserisci stringa1: ')
+s2 = input('Inserisci stringa2: ')
+
+print('Usando fun1: ', fun1(s1, s2))
+print('Usando fun2: ', fun2(s1, s2))
+print('Usando fun3: ', fun3(s1, s2))
+print('Usando fun4: ', fun4(s1, s2))
