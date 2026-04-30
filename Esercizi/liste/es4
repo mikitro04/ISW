@@ -1,0 +1,26 @@
+# Scrivere una funzione che chiede all’utente di inserire dei
+#  numeri interi separati da uno spazio. La funzione stamperà
+#  le tabelline dei numeri inseriti.
+
+def tabellina(n):
+    print(f'{n}x0={int(n)*0}')
+    print(f'{n}x=1{int(n)*1}')
+    print(f'{n}x2={int(n)*2}')
+    print(f'{n}x3={int(n)*3}')
+    print(f'{n}x4={int(n)*4}')
+    print(f'{n}x5={int(n)*5}')
+    print(f'{n}x6={int(n)*6}')
+    print(f'{n}x7={int(n)*7}')
+    print(f'{n}x8={int(n)*8}')
+    print(f'{n}x9={int(n)*9}')
+    print(f'{n}x10={int(n)*10}')
+
+def calcolaTabelline():
+    l = input("Inserisci numeri seguiti da uno spazio per vederne le tabelline: ")
+    l2 = l.split()
+    for el in l2:
+        print(f"Tabellina del {el}:")
+        tabellina(el)
+        print("")
+
+calcolaTabelline()

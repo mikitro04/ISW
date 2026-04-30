@@ -1,0 +1,15 @@
+# Creare la propria funzione sum di somma.
+# Prende in ingresso una lista e torna la somma dei suoi
+#  elementi.
+# 
+# Esempio:
+#  sum([1, 2, 3, 4]) " 10
+
+def sum(l):
+    res = 0
+    for el in l:
+        res += el
+    return res
+
+lista = [1,2,3,4]
+print(sum(lista))

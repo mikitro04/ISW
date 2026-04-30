@@ -1,0 +1,18 @@
+# Scrivere una funzione che restituisca in output i numeri
+#  della sequenza di Fibonacci, entro una soglia specifica
+#  impostata dall’utente.
+
+# NOTA: Nella serie di Fibonacci, ciascun numero della serie è
+#  la somma dei due numeri che lo precedono
+
+def fibonacci_ricorsivo(n):
+    # Casi Base
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    
+    # Passo Ricorsivo
+    return fibonacci_ricorsivo(n - 1) + fibonacci_ricorsivo(n - 2)
+
+print(f"Fibonacci: {fibonacci_ricorsivo(int(input("Inserisci numero per fibonacci: ")))}")

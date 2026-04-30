@@ -1,0 +1,25 @@
+# Scrivere un programma che chieda all’utente di inserire dei
+#  voti, SI/NO, fino a che non si inserisce zero e conti quanti SI e
+#  quanti NO sono stati inseriti e dichiari chi ha vinto o se sono
+#  pari.
+
+def retSiNo():
+    si = 0
+    no = 0
+    while True:
+        res = input("Inserisci Si o No (zero per terminare): ")
+        try:
+            if res == "zero":
+                break
+            elif res == "Si":
+                si += 1
+            elif res == "No":
+                no += 1
+            else:
+                raise KeyError
+        except KeyError:
+            print("Inserisci Si o No")
+
+    print(f"I Si sono {si} e i No sono {no}.")
+
+retSiNo()
